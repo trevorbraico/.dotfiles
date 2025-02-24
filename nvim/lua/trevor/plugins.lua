@@ -87,13 +87,10 @@ return {
         end
     },
 
-    'Civitasv/cmake-tools.nvim',
-
+    'cdelledonne/vim-cmake',
     'voldikss/vim-floaterm',
     'alepez/vim-gtest',
 
     'ggandor/leap.nvim',
-
-    'Vonr/align.nvim'
 
 }
