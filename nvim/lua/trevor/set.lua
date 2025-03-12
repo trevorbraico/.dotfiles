@@ -31,5 +31,3 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.cmd('set noshowmode')  -- Remove -- INSERT --, -- VISUAL --, etc.
-vim.cmd('set mouse=') -- Disable mouse 🤠
-
