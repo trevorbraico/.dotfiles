@@ -12,7 +12,6 @@
     ~/.config/alacritty/alacritty.toml: alacritty.toml
     ~/.config/waybar/config.jsonc: waybar.jsonc
     ~/.config/hypr/hyprland.conf: hyprland.conf
-    ~/.config/hypr/hyprpaper.conf: hyprpaper.conf
     ~/.config/hypr/pyprland.toml: pyprland.toml
 
 - create:
