@@ -222,3 +222,11 @@ ins_right {
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
+
+vim.api.nvim_create_user_command("HideLualine", function() lualine.hide() end, {
+    nargs = 0,
+    desc = "Toggle lualine",
+})
+
+vim.cmd.HideLualine()
+

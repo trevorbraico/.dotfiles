@@ -93,4 +93,11 @@ return {
 
     'ggandor/leap.nvim',
 
+    {
+        'Vonr/align.nvim',
+        branch = "v2",
+        lazy = true,
+    },
+
+    'alx741/vinfo'
 }
