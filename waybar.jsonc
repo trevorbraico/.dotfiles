@@ -1,0 +1,81 @@
+// -*- mode: jsonc -*-
+[
+    {
+        "output": [
+            "HDMI-A-1",
+            "DP-1"
+        ],
+        // "layer": "top", // Waybar at top layer
+        // "position": "bottom", // Waybar position (top|bottom|left|right)
+        "height": 34, // Waybar height (to be removed for auto height)
+        // "width": 1280, // Waybar width
+        "spacing": 12, // Gaps between modules (4px)
+        // Choose the order of the modules
+        "modules-left": [
+            "hyprland/workspaces"
+        ],
+        "modules-center": [
+            "hyprland/window"
+        ],
+        "modules-right": [
+            "mpd",
+            "pulseaudio",
+            "cpu",
+            "memory",
+            "custom/mullvad",
+            "clock"
+        ],
+        // Modules configuration
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "format-icons": {
+                "active": "◉",
+                "default": "⭘ "
+            }
+        },
+        "hyprland/window": {
+            "format": "{title}"
+        },
+        "mpd": {
+            "format": "{title}",
+            "interval": 1
+        },
+        "pulseaudio": {
+            "format-muted": "",
+            "format": "{volume}% 🔊",
+            "on-click": "pulseaudio-ctl mute",
+            "scroll-step": 1
+        },
+        "custom/mullvad": {
+            "format": "{}",
+            "exec": "echo $(mullvad status | tail -n 1 | awk -F', ' '{ print $2 }' | awk -F'.' '{ print $1 }') : $(mullvad status | tail -n 1 | awk -F': ' '{ print $3 }')",
+            "interval": 1
+        },
+        "clock": {
+            "interval": 1,
+            "timezone": "America/Chicago",
+            "format": "{:%H:%M:%S %Z}",
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format-alt": "{:%Y-%m-%d}"
+        },
+        "cpu": {
+            "format": "{usage}%  ",
+            "tooltip": false
+        },
+        "memory": {
+            "format": "{}% "
+        },
+        "temperature": {
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 80,
+            // "format-critical": "{temperatureC}°C {icon}",
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": [
+                "",
+                "",
+                ""
+            ]
+        }
+    }
+]

@@ -1,0 +1,30 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/nvim/:
+      glob: true
+      path: nvim/**
+    ~/.tmux.conf: tmux.conf
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
+    ~/.config/waybar/config.jsonc: waybar.jsonc
+    ~/.config/hypr/hyprland.conf: hyprland.conf
+    ~/.config/hypr/pyprland.toml: pyprland.toml
+    ~/.gitconfig: gitconfig
+
+- create:
+    - ~/
+    - ~/.config/
+    - ~/.config/nvim/
+    - ~/.config/nvim/lua/trevor/
+    - ~/.config/nvim/after/plugin/
+    - ~/.config/nvim/plugin/
+    - ~/.config/hypr/
+    - ~/.config/alacritty/
+    - ~/.config/waybar/
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
