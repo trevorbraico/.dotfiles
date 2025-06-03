@@ -26,8 +26,6 @@ end)
 vim.keymap.set("n", "<C-n>", vim.cmd.tabnext)
 vim.keymap.set("n", "<C-m>", vim.cmd.tabprevious)
 
-vim.keymap.set("n", "<leader>tgd", ":lua vim.lsp.buf.definition()<CR>:tabnew<CR><C-O>")
-
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -45,18 +43,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>ap", vim.cmd.AbsPath)
-
-local run_cmds = {
-    ["python"] = "python",
-    ["go"] = "go run",
-    ["lua"] = "lua",
-    ["sh"] = "bash"
-}
-
-vim.keymap.set("n", "<leader>ru", function()
-    local extension = vim.bo.ft
-    local filename = vim.fn.expand("%:p")
-    local cmd = run_cmds[extension].." "..filename
-    vim.cmd('!'..cmd)
-end
-)

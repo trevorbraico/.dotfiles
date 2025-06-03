@@ -6,4 +6,3 @@ animation = "fromTop"
 command = "alacritty -e ncmpcpp"
 class = "Alacritty"
 size = "50% 60%" 
-

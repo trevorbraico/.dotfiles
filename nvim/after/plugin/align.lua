@@ -12,7 +12,6 @@ end)
 
 vim.keymap.set("x", "gar", function() require("align").align_to_string({
     preview = true,
-    regex = true
+    regex   = true
     })
 end)
-
