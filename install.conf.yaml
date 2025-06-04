@@ -13,7 +13,6 @@
     ~/.config/waybar/config.jsonc: waybar.jsonc
     ~/.config/hypr/hyprland.conf: hyprland.conf
     ~/.config/hypr/pyprland.toml: pyprland.toml
-    ~/.gitconfig: gitconfig
 
 - create:
     - ~/
